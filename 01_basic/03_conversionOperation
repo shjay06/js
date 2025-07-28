@@ -1,0 +1,24 @@
+let score = "18"
+
+//console.log(typeof score)
+// console.log(typeof(score));
+
+let scoreInNumber = Number(score)
+// console.log(typeof scoreInNumber)
+
+//"33" => 33
+//"33abc" => NaN
+//true => 1, false => 0 
+
+let UserLoggedIn = 1
+let UserBoolean = Boolean(UserLoggedIn)
+
+// 1 => true, 0 => false
+// "33abc" => NaN
+// "hitesh" => true, "" => false
+
+let someNumber = 33
+
+let stringNumber = String(someNumber)
+console.log(stringNumber)
+console.log(typeof stringNumber);
