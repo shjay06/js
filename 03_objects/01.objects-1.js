@@ -21,8 +21,15 @@ console.log(JsUser["full name"]);//this is useful when key is declared as string
 
 
 JsUser.name="JS"
-Object.freeze(JsUser);//to stop changing values of any object
+//Object.freeze(JsUser);//to stop changing values of any object
 
 JsUser.greeting = function(){
     console.log("Hello JS User");
 }
+
+JsUser.greetingTwo() = function(){
+  console.log(`Hello my name, ${this.name}`);
+}
+
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());
