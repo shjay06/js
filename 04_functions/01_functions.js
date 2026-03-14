@@ -52,4 +52,11 @@ handleObject({
     price:900
 })
 
+//in js a variable can hold anything value,json,function and one way to so it written below
 
+const addTwo = function(num){
+    return num+2;
+}
+
+addTwo(10)
+//Accessing function that is stored in a variable before the place where it is declared, it will give error but not in the normal function declaration.
