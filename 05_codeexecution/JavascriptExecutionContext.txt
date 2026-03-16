@@ -1,0 +1,22 @@
+Javascript Execution Context
+
+//Phase 1
+So JS execution context contains two context, 
+one is called as Global Execution Context which is actully referring to this. And node env it will give empty, but in browser env it will give Windows Object.
+
+
+Second one is function execution context
+
+Third Execution context(which is part of global execution context)
+
+So 
+
+//Phase 2
+Memory Creation Phase
+variable will get storage and it will store undefined,
+function will store the whole function
+
+//Phase 3
+Execution Phase
+variable will get it's value
+function will make a separate executable context and now again two phase will occur again that is Memory creation phase and execution phase and the result will be returned to global execution context
