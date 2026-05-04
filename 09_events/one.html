@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141;color:aliceblue">
+    <h2>Amazing Images</h2>
+    <div>
+    <ul id="images">
+            <li><img width="200px" id="photoshop"
+            src="./Batman Wallpaper Iphone.jpg" alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+            src="./Batman Wallpaper Iphone.jpg" alt=""></li>
+            <li><img width="200px" id="river"
+            src="./Batman Wallpaper Iphone.jpg" alt=""></li>
+            <li><img width="200px" id="owl"
+            src="./Batman Wallpaper Iphone.jpg" alt=""></li>
+            <li><img width="200px" id="prayer"
+            src="./Batman Wallpaper Iphone.jpg" alt=""></li> 
+            <li><a href="https://google.com" id="google">Google</a></li>
+        
+    </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("owl").onclick = function(){
+    //     alert("owl clicked");
+    // }
+  // attachEvent() is used in older versions of Internet Explorer (IE 8 and earlier) to attach event handlers to elements. It is not supported in modern browsers and has been replaced by addEventListener().
+    // document.getElementById("owl").addEventListener("click", function(){
+    //     alert("owl clicked");
+    // })
+
+//   document.getElementById("owl").addEventListener("click", function(e){
+//         console.log(e);
+//     },false)
+    //default false resides in the above
+    //type, timestamp, target, srcElement, currentTarget, eventPhase, bubbles, cancelable, etc are the properties of the event object
+    // document.getElementById("images").addEventListener("click", function(){
+    //     alert("clicked inside the ul");
+    // },false)
+    // document.getElementById("owl").addEventListener("click", function(){
+    //     alert("owl clicked");
+    //     e.stopPropagation(); // This method prevents the event from bubbling up to parent elements. In this case, when you click on the "owl" image, it will trigger the alert for "owl clicked" but will not trigger the alert for "clicked inside the ul" because the event propagation is stopped at the "owl" element.
+    // },false)
+    // //false means that the event will be captured during the bubbling phase, which is the default behavior. In this phase, the event starts from the target element and bubbles up through its ancestors until it reaches the root of the document. If you set it to true, the event will be captured during the capturing phase, which means it will be handled on the way down to the target element before it reaches it.
+    // document.getElementById("google").addEventListener("click", function(e){
+    //     e.preventDefault(); // This method prevents the default action associated with the event from occurring. In this case, when you click on the "Google" link, it will prevent the browser from navigating to the Google website, allowing you to handle the click event in a custom way (e.g., showing an alert or performing some other action) without leaving the current page.
+    //     alert("Google link clicked");
+    // },false)
+
+    document.querySelector("#images").addEventListener("click", function(e){
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode;
+        // removeIt.remove();
+        //same can be achieved by below
+        removeIt.parentNode.removeChild(removeIt);
+    }, false)
+</script>
+</html>
