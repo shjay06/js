@@ -1,0 +1,8 @@
+The Promise object represents the eventual completion of failure of an asynchronous and its resulting value.
+
+A promise have three state
+1. pending
+2. fulfilled
+3. rejected
+
+Promise came in ES6, so before that how these async operations were happening, so before that Q and Bluebird are some libraries used for that.

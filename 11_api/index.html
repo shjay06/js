@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, quisquam. Nam tenetur, numquam facilis perferendis quibusdam ipsam accusamus eum voluptatem animi harum, explicabo cumque ut consequuntur, velit delectus consectetur debitis.
+    Nobis doloribus, est exercitationem incidunt iusto velit, unde quia, odit laborum totam in enim mollitia laboriosam nam reiciendis vitae natus modi excepturi eum eligendi dolorem sint dolorum voluptatibus? Laudantium, voluptates?
+    Fugit velit explicabo deleniti animi, ad totam ullam itaque magnam inventore autem corporis possimus commodi sit ex laudantium non! Facere cupiditate voluptas architecto quam nesciunt atque, adipisci dolorem dolores maiores.
+    Ratione alias velit necessitatibus quasi tempore dolore libero culpa aut nam ut illum fugiat aliquid perferendis provident, numquam accusantium expedita corporis atque tenetur, ullam repellat fugit! Aliquam nostrum reprehenderit voluptatibus?
+    Consectetur voluptatem sit aliquam molestiae nihil inventore ipsa iure ut quia et dolores quos molestias esse, dolorum nemo expedita, deserunt labore reprehenderit, possimus corrupti. Dolores dignissimos sint magni ad sequi.
+</body>
+<script>
+    const requesturl = 'https://api.github.com/users/shjay06';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requesturl);
+    xhr.onreadystatechange = function() {
+     console.log(xhr.readyState);  
+     if(xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText); 
+        console.log(typeof data);
+        console.log(data.followers);
+     } 
+    };  
+    xhr.send();
+</script>
+</html>
