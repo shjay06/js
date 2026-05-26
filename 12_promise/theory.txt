@@ -6,3 +6,7 @@ A promise have three state
 3. rejected
 
 Promise came in ES6, so before that how these async operations were happening, so before that Q and Bluebird are some libraries used for that.
+
+
+fetch() global function
+The global fetch() method starts the process of fetching resource from the network. returning a promise which is fulfilled once the reponse is available 
